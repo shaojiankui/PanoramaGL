@@ -1,0 +1,54 @@
+0.1 (July/2012):
+================
+
+The version 0.1 is different than 0.1 Beta and 0.1 Beta 2, the library structure was changed for improvements. If you are using older version of PanoramaGL, you need change a little your code to work with 0.1 version.
+
+Please check the last version of "HelloPanoramaGL" example.
+
+Bugs fixes:
+
+- Appearance of images (distortion) when orientation change.
+- Render problems with iOS >= 4.x.
+- Memory leaks.
+
+Improvements:
+
+- Change of LGPL license to Apache 2.0 license.
+- Support for iOS >= 4.x.
+- Support for iPad.
+- Support for Hotspots (see PLHotspot class).
+- Spherical images supports up 2048x1024 texture (see PLSpherical2Panorama class).
+- Support for simulated gyroscope (see startSensorialRotation method on PLView class).
+- Support for simple JSON protocol (see PLJSONLoader class and load method on PLView class).
+
+Note 1: This version does not support Zoom Controls like previous version (If you need zoom controls you can add any UIView to PLView)
+Note 2: I do not give real support for gyroscope, because I do not have a device that support it : (, but you can try to modify PLViewBase.m and change startSensorialRotation and doGyroUpdate methods.
+
+0.1 Beta 2 (July/2010):
+=======================
+
+Bugs fixes:
+
+- Appearance of images (Distortion) when orientation changed.
+- Fov range problem (Zoom In and Zoom Out range).
+- Fov and Reset detection problem (Problem detecting two and three fingers on screen).
+- Dependences error in PLViewDelegate.
+
+Improvements:
+
+- Support reset when device shake.
+- Zoom controls.
+
+0.1 Beta (April/2010):
+======================
+
+Bugs fixes:
+
+- Memory problem loading new textures.
+- Appearance of images (Distortion).
+- Error using the view orientation.
+- Error detecting touches to use objects over view.
+
+Improvements:
+
+- Support for events on PLView (See PLViewDelegate).
