@@ -1,0 +1,34 @@
+{
+    "urlBase": "res://",
+    "type": "cubic",
+    "sensorialRotation": false,
+    "images":
+    {
+        "preview": "pano_preview.jpg",
+        "front": "pano_f.jpg",
+        "back": "pano_b.jpg",
+        "left": "pano_l.jpg",
+        "right": "pano_r.jpg",
+        "up": "pano_u.jpg",
+        "down": "pano_d.jpg"
+    },
+    "camera":
+    {
+        "vlookat": 0,
+        "hlookat": 0,
+        "atvmin": -90,
+        "atvmax": 90,
+        "athmin": -180,
+        "athmax": 180
+    },
+    "hotspots": [
+                 {
+                 "id": 1,
+                 "atv": 0,
+                 "ath": 0,
+                 "width": 0.08,
+                 "height": 0.08,
+                 "image": "hotspot.png"
+                 }
+                ]
+}

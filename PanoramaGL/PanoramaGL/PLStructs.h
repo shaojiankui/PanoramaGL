@@ -28,14 +28,16 @@ typedef struct PLRange PLRange;
 
 struct PLVertex 
 {
-	CGFloat x, y, z;
+//	CGFloat x, y, z;
+    GLfloat x, y, z;
 };
 typedef struct PLVertex PLVertex;
 typedef struct PLVertex PLPosition;
 
 struct PLRotation
 {
-	CGFloat pitch, yaw, roll;
+//	CGFloat pitch, yaw, roll;
+    GLfloat pitch, yaw, roll;
 };
 typedef struct PLRotation PLRotation;
 

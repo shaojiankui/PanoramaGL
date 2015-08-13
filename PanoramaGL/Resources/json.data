@@ -1,0 +1,29 @@
+{
+    "urlBase": "res://",
+    "type": "spherical",
+    "sensorialRotation": false,
+    "images":
+    {
+        "preview": "pano_sphere_preview.jpg",
+        "image": "pano_sphere.jpg"
+    },
+    "camera":
+    {
+        "vlookat": 0,
+        "hlookat": 0,
+        "atvmin": -90,
+        "atvmax": 90,
+        "athmin": -180,
+        "athmax": 180
+    },
+    "hotspots": [
+                 {
+                 "id": 1,
+                 "atv": 0,
+                 "ath": 0,
+                 "width": 0.08,
+                 "height": 0.08,
+                 "image": "hotspot.png"
+                 }
+                ]
+}
