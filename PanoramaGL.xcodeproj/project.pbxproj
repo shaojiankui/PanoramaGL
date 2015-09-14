@@ -17,7 +17,6 @@
 		A2E776BF1B7C8ED300D3DFE7 /* glues_project.c in Sources */ = {isa = PBXBuildFile; fileRef = A2E7765F1B7C8ED300D3DFE7 /* glues_project.c */; };
 		A2E776C01B7C8ED300D3DFE7 /* glues_quad.c in Sources */ = {isa = PBXBuildFile; fileRef = A2E776611B7C8ED300D3DFE7 /* glues_quad.c */; };
 		A2E776C11B7C8ED300D3DFE7 /* glues_registry.c in Sources */ = {isa = PBXBuildFile; fileRef = A2E776631B7C8ED300D3DFE7 /* glues_registry.c */; };
-		A2E776C21B7C8ED300D3DFE7 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E776671B7C8ED300D3DFE7 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2E776C31B7C8ED300D3DFE7 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = A2E776681B7C8ED300D3DFE7 /* LICENSE.txt */; };
 		A2E776C41B7C8ED300D3DFE7 /* PLCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E7766A1B7C8ED300D3DFE7 /* PLCamera.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2E776C51B7C8ED300D3DFE7 /* PLCubicPanorama.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E7766E1B7C8ED300D3DFE7 /* PLCubicPanorama.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -96,8 +95,6 @@
 		A2E776621B7C8ED300D3DFE7 /* glues_quad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glues_quad.h; sourceTree = "<group>"; };
 		A2E776631B7C8ED300D3DFE7 /* glues_registry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glues_registry.c; sourceTree = "<group>"; };
 		A2E776641B7C8ED300D3DFE7 /* glues_registry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glues_registry.h; sourceTree = "<group>"; };
-		A2E776661B7C8ED300D3DFE7 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		A2E776671B7C8ED300D3DFE7 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		A2E776681B7C8ED300D3DFE7 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		A2E776691B7C8ED300D3DFE7 /* PLCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCamera.h; sourceTree = "<group>"; };
 		A2E7766A1B7C8ED300D3DFE7 /* PLCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLCamera.m; sourceTree = "<group>"; };
@@ -266,7 +263,6 @@
 			children = (
 				A2E776571B7C8ED300D3DFE7 /* CHANGES.txt */,
 				A2E776581B7C8ED300D3DFE7 /* glues */,
-				A2E776651B7C8ED300D3DFE7 /* JSONKit */,
 				A2E776681B7C8ED300D3DFE7 /* LICENSE.txt */,
 				A2E776691B7C8ED300D3DFE7 /* PLCamera.h */,
 				A2E7766A1B7C8ED300D3DFE7 /* PLCamera.m */,
@@ -372,15 +368,6 @@
 				A2E776641B7C8ED300D3DFE7 /* glues_registry.h */,
 			);
 			path = glues;
-			sourceTree = "<group>";
-		};
-		A2E776651B7C8ED300D3DFE7 /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				A2E776661B7C8ED300D3DFE7 /* JSONKit.h */,
-				A2E776671B7C8ED300D3DFE7 /* JSONKit.m */,
-			);
-			path = JSONKit;
 			sourceTree = "<group>";
 		};
 		A2E776E61B7C93AB00D3DFE7 /* Resources */ = {
@@ -518,7 +505,6 @@
 				A2E776DA1B7C8ED300D3DFE7 /* PLTransitionFadeBase.m in Sources */,
 				A2E776DB1B7C8ED300D3DFE7 /* PLTransitionFadeIn.m in Sources */,
 				A2E776DD1B7C8ED300D3DFE7 /* PLUtils.m in Sources */,
-				A2E776C21B7C8ED300D3DFE7 /* JSONKit.m in Sources */,
 				A2E776BE1B7C8ED300D3DFE7 /* glues_mipmap.c in Sources */,
 				A2E776DC1B7C8ED300D3DFE7 /* PLTransitionFadeOut.m in Sources */,
 				A2E776E01B7C8ED300D3DFE7 /* PLViewBase.m in Sources */,

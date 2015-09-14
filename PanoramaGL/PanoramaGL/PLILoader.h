@@ -17,7 +17,6 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "JSONKit.h"
 
 @protocol PLIView;
 

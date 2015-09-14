@@ -84,12 +84,30 @@
 
 #pragma mark -
 #pragma mark utility methods
-
+-(id)paseJSON:(NSString*)jsonString{
+    
+    NSData* data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error=nil;
+    id jsontObject=[NSJSONSerialization JSONObjectWithData:data
+                                                   options:NSJSONReadingAllowFragments
+                                                     error:&error];
+    if (jsontObject !=nil && error==nil) {
+        if ([jsontObject isKindOfClass:[NSDictionary class]]) {
+            //NSLog(@"NSDictionary JsonObject ->%@",(NSDictionary *)JsonObject);
+        }
+        else if ([jsontObject isKindOfClass:[NSArray class]]) {
+            //NSLog(@"NSArray JsonObject ->%@",(NSArray *)JsonObject);
+        }else{
+            //NSLog(@"JsonObject not NSDictionary||NSArray Class");
+        }
+    }
+    return jsontObject;
+}
 -(void)loadJSON:(NSString *)jsonString
 {
     if(jsonString)
     {
-        NSObject *jsonObject = [jsonString objectFromJSONString];
+        NSObject *jsonObject = [self paseJSON:jsonString];
         if(jsonObject && [jsonObject isKindOfClass:[NSDictionary class]])
         {
             json = (NSDictionary *)[jsonObject retain];
