@@ -82,8 +82,8 @@ static int sPreviewFacesOrder[] = { 1, 3, 0, 2, 4, 5 };
 		if(value && [value isValid])
 		{
 			value = [value retain];
-			int width = [value getWidth];
-			int height = [value getHeight];
+			int width = (int)[value getWidth];
+			int height = (int)[value getHeight];
 			if([PLMath isPowerOfTwo:width] && (height % width == 0 || width % height == 0))
 			{
 				int sides = [self getPreviewSides], counter = 0;

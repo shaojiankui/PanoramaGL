@@ -128,10 +128,10 @@
 			[self destroyFramebuffer];
 			[self createFramebuffer];
 			
-			glBindRenderbufferOES(GL_RENDERBUFFER_OES, colorRenderbuffer);
-			[context renderbufferStorage:GL_RENDERBUFFER_OES fromDrawable:(CAEAGLLayer *)view.layer];
-			glGetRenderbufferParameterivOES(GL_RENDERBUFFER_OES, GL_RENDERBUFFER_WIDTH_OES, &backingWidth);
-			glGetRenderbufferParameterivOES(GL_RENDERBUFFER_OES, GL_RENDERBUFFER_HEIGHT_OES, &backingHeight);
+			glBindRenderbufferOES(GL_RENDERBUFFER_OES, colorRenderbuffer); 
+			[context renderbufferStorage:GL_RENDERBUFFER_OES fromDrawable:(CAEAGLLayer *)view.layer]; // 为绘制缓冲区分配存储区，此处将CAEAGLLayer的绘制存储区作为绘制缓冲区的存储区
+			glGetRenderbufferParameterivOES(GL_RENDERBUFFER_OES, GL_RENDERBUFFER_WIDTH_OES, &backingWidth);  // 获取绘制缓冲区的像素宽度
+			glGetRenderbufferParameterivOES(GL_RENDERBUFFER_OES, GL_RENDERBUFFER_HEIGHT_OES, &backingHeight); // 获取绘制缓冲区的像素高度
 			
 			aspect = (float)backingWidth/(float)backingHeight;
 			

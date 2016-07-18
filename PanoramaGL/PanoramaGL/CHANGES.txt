@@ -1,3 +1,18 @@
+0.1 by skyfox
+================
+- Spherical images supports up 4096x2048 texture (see PLSpherical2Panorama class).
+- CubicPanorama images supports up 2048x2048 texture
+
+Bugs fixes:
+remove some warming
+
+
+0.1 by skyfox
+================
+Bugs fixes:
+Hotspots arm64 click bug
+
+
 0.1 (July/2012):
 ================
 

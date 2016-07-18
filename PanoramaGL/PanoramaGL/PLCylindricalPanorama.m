@@ -127,7 +127,7 @@
     else if(previewTextureIsValid)
         glBindTexture(GL_TEXTURE_2D, previewTexture.textureID);
     
-	gluCylinder(quadratic, kRatio, kRatio, height, divs, divs);
+	gluCylinder(quadratic, kRatio, kRatio, height, (GLint)divs, (GLint)divs);
     
 	glDisable(GL_TEXTURE_2D);
     

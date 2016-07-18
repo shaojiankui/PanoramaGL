@@ -127,8 +127,12 @@
 		return 256;
 	else if(dimension <= 512)
 		return 512;
+    else if(dimension <= 1024)
+        return 1024;
+    else if(dimension <= 2048)
+        return 2048;
 	else
-		return 1024;
+		return 2048;
 }
 
 #pragma mark -
@@ -143,8 +147,8 @@
 					 
 		[self deleteTexture];
 					 
-		width = [image getWidth];
-		height = [image getHeight];
+		width = (int)[image getWidth];
+		height = (int)[image getHeight];
 					 
 		if(width > kTextureMaxWidth || height > kTextureMaxHeight)
 		{

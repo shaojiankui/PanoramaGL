@@ -1,18 +1,19 @@
-# PanoramaGL
+# PanoramaGL  全景展示
 PanoramaGL, fixed some issues,share to someone need it,supports arm64,create by xcode7
 
 based https://code.google.com/p/panoramagl
 
+## 变更
 
-PanoramaGL 全景展示
-fix arm64 PLHotspot bug
+* fix arm64 PLHotspot bug 		修正arm64下PLHotspot不能点击的bug
+* texture supports 2048*2048  	纹理支持2048*2048
+* remove some warning 			移除一些警告
 
-use CMMotionManager replace UIAccelerometer
+##其他选择
 
-add Accelerometer Effect
+* Panorama 	   https://github.com/robbykraft/Panorama
+* JAPanoView     https://bitbucket.org/javieralonso/japanoview
+* threejs.org    http://threejs.org/examples/webgl_panorama_equirectangular.html
 
-修正arm64下PLHotspot不能点击的bug
-
-对重力感应做了向下兼容
-
-添加了重力感应效果
+##工具
+* Pano2vr 全景图像转化与制作软件

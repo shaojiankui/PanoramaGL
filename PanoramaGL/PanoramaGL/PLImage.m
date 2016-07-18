@@ -130,7 +130,9 @@
 
 -(void)createWithSize:(CGSize)size
 {
-	UIGraphicsBeginImageContext(CGRectMake(0.0f, 0.0f, size.width, size.height).size);
+    
+//	UIGraphicsBeginImageContext(CGRectMake(0.0f, 0.0f, size.width, size.height).size);
+    UIGraphicsBeginImageContextWithOptions(size, YES, 0);
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	CGImageRef image = CGBitmapContextCreateImage(context);
 	[self deleteImage];
@@ -185,7 +187,7 @@
 
 -(unsigned char *)getBits
 {
-	int w = width, h = height;
+	int w = (int)width, h = (int)height;
 	CGImageRef image = cgImage;
 	unsigned char * data = (unsigned char *) malloc(w * h * 4);
 	CGContextRef context = CGBitmapContextCreate(data, w, h, 8, w * 4, CGImageGetColorSpace(image), kCGImageAlphaPremultipliedLast);
@@ -268,7 +270,9 @@
 	int w = size.width;
 	int h = size.height;
 	
-	UIGraphicsBeginImageContext(CGRectMake(0.0f, 0.0f, w, h).size);
+//	UIGraphicsBeginImageContext(CGRectMake(0.0f, 0.0f, w, h).size);
+    UIGraphicsBeginImageContextWithOptions(size, YES, 0);
+
 	CGContextRef context = UIGraphicsGetCurrentContext();
 
 	if(!context)
@@ -378,7 +382,9 @@
 			return self;
 	}
 	
-	UIGraphicsBeginImageContext(bounds.size);
+//	UIGraphicsBeginImageContext(bounds.size);
+    UIGraphicsBeginImageContextWithOptions(bounds.size, YES, 0);
+
 	context = UIGraphicsGetCurrentContext();
 	
 	CGContextScaleCTM(context, 1.0f, -1.0f);
@@ -456,8 +462,9 @@
         UIImage *rightUImage = [UIImage imageWithCGImage:rightImage.CGImage];
         
         CGSize newSize = CGSizeMake([leftImage getWidth] + [rightImage getWidth], MAX([leftImage getHeight], [rightImage getHeight]));
-        UIGraphicsBeginImageContext(newSize);
-        
+//        UIGraphicsBeginImageContext(newSize);
+        UIGraphicsBeginImageContextWithOptions(newSize, YES, 0);
+
         [leftUImage drawInRect:CGRectMake(0.0f, 0.0f, [leftImage getWidth], newSize.height)];
         [rightUImage drawInRect:CGRectMake([rightImage getWidth], 0.0f, [rightImage getWidth], newSize.height)];
         

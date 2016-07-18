@@ -67,12 +67,14 @@
 
 -(void)setImage:(PLImage *)image
 {
-    if(image && [image getWidth] == 2048 && [image getHeight] == 1024)
+    CGFloat scale = kTextureMaxWidth/2048.0 *2;
+
+    if(image && [image getWidth] == scale*2048 && [image getHeight] == scale*1024)
     {
-        PLImage *frontImage = [[image clone] crop:CGRectMake(768.0f, 0.0f, 512.0f, 1024.0f)];
-        PLImage *backImage = [PLImage joinImagesHorizontally:[[image clone] crop:CGRectMake(1792.0f, 0.0f, 256.0f, 1024.0f)] rightImage:[[image clone] crop:CGRectMake(0.0f, 0.0f, 256.0f, 1024.0f)]];
-        PLImage *rightImage = [[image clone] crop:CGRectMake(1024.0f, 0.0f, 1024.0f, 1024.0f)];
-        [image crop:CGRectMake(0.0, 0.0f, 1024.0f, 1024.0f)];
+        PLImage *frontImage = [[image clone] crop:CGRectMake(scale*768.0f, 0.0f, scale*512.0f, scale*1024.0f)];
+        PLImage *backImage = [PLImage joinImagesHorizontally:[[image clone] crop:CGRectMake(scale*1792.0f, 0.0f, scale*256.0f, scale*1024.0f)] rightImage:[[image clone] crop:CGRectMake(0.0f, 0.0f, scale*256.0f, scale*1024.0f)]];
+        PLImage *rightImage = [[image clone] crop:CGRectMake(scale*1024.0f, 0.0f, scale*1024.0f, scale*1024.0f)];
+        [image crop:CGRectMake(0.0, 0.0f, scale*1024.0f, scale*1024.0f)];
         [self setTexture:[PLTexture textureWithImage:frontImage] face:PLSpherical2FaceOrientationFront];
         [self setTexture:[PLTexture textureWithImage:image] face:PLSpherical2FaceOrientationLeft];
         [self setTexture:[PLTexture textureWithImage:rightImage] face:PLSpherical2FaceOrientationRight];
@@ -124,28 +126,28 @@
         else
         {
             glBindTexture(GL_TEXTURE_2D, previewTexture.textureID);
-            gluSphere(quadratic, kRatio + 0.05f, previewDivs, previewDivs);
+            gluSphere(quadratic, kRatio + 0.05f, (GLint)previewDivs, (GLint)previewDivs);
         }
     }
     if(frontTextureIsValud)
     {
         glBindTexture(GL_TEXTURE_2D, frontTexture.textureID);
-        glu3DArc(quadratic, M_PI_2, -M_PI_4, NO, kRatio, divs, divs);
+        glu3DArc(quadratic, M_PI_2, -M_PI_4, NO, kRatio, (GLint)divs, (GLint)divs);
     }
     if(backTextureIsValid)
     {
         glBindTexture(GL_TEXTURE_2D, backTexture.textureID);
-        glu3DArc(quadratic, M_PI_2, -M_PI_4, YES, kRatio, divs, divs);
+        glu3DArc(quadratic, M_PI_2, -M_PI_4, YES, kRatio, (GLint)divs, (GLint)divs);
     }
     if(leftTextureIsValid)
     {
         glBindTexture(GL_TEXTURE_2D, leftTexture.textureID);
-        gluHemisphere(quadratic, NO, kRatio, divs, divs);
+        gluHemisphere(quadratic, NO, kRatio, (GLint)divs, (GLint)divs);
     }
     if(rightTextureIsValid)
     {
         glBindTexture(GL_TEXTURE_2D, rightTexture.textureID);
-        gluHemisphere(quadratic, YES, kRatio, divs, divs);
+        gluHemisphere(quadratic, YES, kRatio, (GLint)divs, (GLint)divs);
     }
     
 	glDisable(GL_TEXTURE_2D);

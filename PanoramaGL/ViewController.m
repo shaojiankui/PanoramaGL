@@ -48,19 +48,19 @@
 -(void)selectPanorama:(NSInteger)index
 {
     NSObject<PLIPanorama> *panorama = nil;
-    //Spherical2 panorama example (supports up 2048x1024 texture)
+    //Spherical2 panorama example (supports up 4096x2048 texture)
     if(index == 0)
     {
         panorama = [PLSpherical2Panorama panorama];
         [(PLSpherical2Panorama *)panorama setImage:[PLImage imageWithPath:[[NSBundle mainBundle] pathForResource:@"pano_sphere2" ofType:@"jpg"]]];
     }
-    //Spherical panorama example (supports up 1024x512 texture)
+    //Spherical panorama example (supports up 2048x1024 texture)
     else if(index == 1)
     {
         panorama = [PLSphericalPanorama panorama];
         [(PLSphericalPanorama *)panorama setTexture:[PLTexture textureWithImage:[PLImage imageWithPath:[[NSBundle mainBundle] pathForResource:@"pano_sphere" ofType:@"jpg"]]]];
     }
-    //Cubic panorama example (supports up 1024x1024 texture per face)
+    //Cubic panorama example (supports up 2048x2048 texture per face)
     else if(index == 2)
     {
         PLCubicPanorama *cubicPanorama = [PLCubicPanorama panorama];

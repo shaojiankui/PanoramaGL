@@ -102,7 +102,7 @@
     else if(previewTextureIsValid)
         glBindTexture(GL_TEXTURE_2D, previewTexture.textureID);
     
-	gluSphere(quadratic, kRatio, divs, divs);
+	gluSphere(quadratic, kRatio, (GLint)divs, (GLint)divs);
     
 	glDisable(GL_TEXTURE_2D);
     
