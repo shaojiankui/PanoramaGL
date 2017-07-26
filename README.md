@@ -18,8 +18,8 @@ based https://code.google.com/p/panoramagl
 
 ## 工具
 * Pano2vr 全景图像转化与制作软件
-* 
-#扩展阅读
+
+## 扩展阅读
 
 [iOS开发之360°/720°全景展示](http://www.skyfox.org/ios-720-panoramic-show.html) 
 
