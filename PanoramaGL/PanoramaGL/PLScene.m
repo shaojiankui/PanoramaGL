@@ -40,7 +40,9 @@
 
 -(id)init
 {
-	return [self initWithCamera:[PLCamera camera]];
+    if(self = [super init])
+        [self addCamera:[PLCamera camera]];
+    return self;
 }
 
 -(id)initWithCamera:(PLCamera *)camera

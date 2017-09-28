@@ -67,7 +67,9 @@
 
 -(void)setImage:(PLImage *)image
 {
-    CGFloat scale = kTextureMaxWidth/2048.0 *2;
+//    if(image && [image getWidth] == 2048 && [image getHeight] == 1024)
+    
+    CGFloat scale = kTextureMaxWidth/1024.0;
 
     if(image && [image getWidth] == scale*2048 && [image getHeight] == scale*1024)
     {

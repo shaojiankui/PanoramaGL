@@ -37,10 +37,10 @@
 #pragma mark -
 #pragma mark init methods
 
--(id)init
-{
-    return nil;
-}
+//-(id)init
+//{
+//    return nil;
+//}
 
 -(id)initWithString:(NSString *)string
 {

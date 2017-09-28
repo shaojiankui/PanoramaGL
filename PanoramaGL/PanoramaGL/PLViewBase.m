@@ -912,7 +912,10 @@
 					y = -y;
 				}
                 break;
-		}
+            case UIInterfaceOrientationUnknown:
+                
+                break;
+        }
 
 		endPoint = CGPointMake(startPoint.x + (x * factor), startPoint.y + (y * factor));
 		[self drawView];

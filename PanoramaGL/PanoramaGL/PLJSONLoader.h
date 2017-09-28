@@ -27,5 +27,5 @@
     NSDictionary *hotspotTextures;
     NSDictionary *json;
 }
-
+- (instancetype)init __attribute__((unavailable("Forbidden use init!")));
 @end

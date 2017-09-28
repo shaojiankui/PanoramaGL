@@ -131,6 +131,10 @@
         return 1024;
     else if(dimension <= 2048)
         return 2048;
+    else if(dimension <= 3072)
+        return 3072;
+    else if(dimension <= 4096)
+        return 4096;
 	else
 		return 2048;
 }
@@ -207,6 +211,7 @@
 		unsigned char * bits = image.bits;
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width , height, 0, GL_RGBA, GL_UNSIGNED_BYTE, bits);
 					 
+//        NSLog(@"final width:%zd,height:%zd",width,height);
 		free(bits);
 		bits = nil;
 						  
