@@ -3,6 +3,9 @@ PanoramaGL, fixed some issues,share to someone need it,supports arm64,create by 
 
 based https://code.google.com/p/panoramagl
 
+![](https://raw.githubusercontent.com/shaojiankui/PanoramaGL/master/demo.gif)
+
+
 ## 变更
 
 * fix arm64 PLHotspot bug 		修正arm64下PLHotspot不能点击的bug
@@ -17,9 +20,13 @@ based https://code.google.com/p/panoramagl
 * JAPanoView     https://bitbucket.org/javieralonso/japanoview
 * threejs.org    http://threejs.org/examples/webgl_panorama_equirectangular.html
 * SceneKit自己动手实现全景展示 https://github.com/shaojiankui/Panorama-SceneKit
+* OpenGL自己动手实现全景展示 https://github.com/shaojiankui/Panorama-OpenGL
 
 ## 工具
 * Pano2vr 全景图像转化与制作软件
+Pano2vr软件非常强大，可以鱼眼图与六方图互相转换，可以确定hotspot交互热点，可以输出html flash文件直接浏览。
+![](https://raw.githubusercontent.com/shaojiankui/PanoramaGL/master/pano2vr.png)
+
 
 ## 扩展阅读
 
