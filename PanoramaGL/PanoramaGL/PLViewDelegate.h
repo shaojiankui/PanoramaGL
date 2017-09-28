@@ -42,9 +42,11 @@
 
 #pragma mark -
 #pragma mark accelerometer methods
+//-(BOOL)view:(UIView<PLIView> *)pView shouldAccelerate:(UIAcceleration *)acceleration withAccelerometer:(UIAccelerometer *)accelerometer;
+//-(void)view:(UIView<PLIView> *)pView didAccelerate:(UIAcceleration *)acceleration withAccelerometer:(UIAccelerometer *)accelerometer;
 
--(BOOL)view:(UIView<PLIView> *)pView shouldAccelerate:(UIAcceleration *)acceleration withAccelerometer:(UIAccelerometer *)accelerometer;
--(void)view:(UIView<PLIView> *)pView didAccelerate:(UIAcceleration *)acceleration withAccelerometer:(UIAccelerometer *)accelerometer;
+-(BOOL)view:(UIView<PLIView> *)pView shouldAccelerate:(CMAccelerometerData *)accelerometerData;
+-(void)view:(UIView<PLIView> *)pView didAccelerate:(CMAccelerometerData *)accelerometerData;
 
 #pragma mark -
 #pragma mark inertia methods

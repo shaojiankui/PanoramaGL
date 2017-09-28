@@ -8,6 +8,8 @@ based https://code.google.com/p/panoramagl
 * fix arm64 PLHotspot bug 		修正arm64下PLHotspot不能点击的bug
 * texture supports 2048*2048  	纹理支持2048*2048
 * remove some warning 			移除一些警告
+* use CMMotionManager replace UIAccelerometer 对重力感应做了向下兼容
+* add Accelerometer Effect  添加了重力感应效果
 
 ## 其他选择
 
