@@ -35,5 +35,5 @@
 	
 	float alpha, defaultAlpha;
 }
-
+- (void)resetC:(PLRotation)rotationtm;
 @end

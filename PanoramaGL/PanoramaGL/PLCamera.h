@@ -70,4 +70,6 @@
 
 -(void)cloneCameraProperties:(PLCamera *)value;
 
+
+- (void)resetCurrentC:(PLRotation)rotation Pitch:(float)pitch yaw:(float)yaw;
 @end

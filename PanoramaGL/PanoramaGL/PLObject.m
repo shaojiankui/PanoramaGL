@@ -61,8 +61,16 @@
 #pragma mark -
 #pragma mark reset methods
 
+- (void)resetC:(PLRotation)rotationtmp
+{
+//    rotation = rotationtmp;
+	alpha = defaultAlpha;
+}
+
 -(void)reset
 {
+      NSLog(@"rotation###%f---%f--%f",rotation.pitch,rotation.yaw,rotation.roll);
+    NSLog(@"alpha ###%f",alpha);
 	rotation = PLRotationMake(0.0f, 0.0f, 0.0f);
 	alpha = defaultAlpha;
 }

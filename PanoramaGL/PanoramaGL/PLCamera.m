@@ -39,7 +39,7 @@
 {
 	fovRange = PLRangeMake(kDefaultFovMinValue, kDefaultFovMaxValue);
 	self.fov = kDefaultFov;
-	isFovEnabled = YES;
+//	isFovEnabled = YES;
 	fovSensitivity = kDefaultFovSensitivity;
 	minDistanceToEnableFov = kDefaultMinDistanceToEnableFov;
 	initialLookAt = PLRotationMake(0.0f, 0.0f, 0.0f);
@@ -50,7 +50,12 @@
 
 #pragma mark -
 #pragma mark reset methods
-
+- (void)resetCurrentC:(PLRotation)rotation Pitch:(float)pitch yaw:(float)yaw
+{
+    self.fov = kDefaultFov;
+	[super resetC:rotation];
+	[self lookAtWithPitch:rotation.pitch yaw:rotation.yaw];
+}
 -(void)reset
 {
 	self.fov = kDefaultFov;
