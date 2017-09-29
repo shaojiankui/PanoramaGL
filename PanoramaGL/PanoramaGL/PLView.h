@@ -28,6 +28,8 @@
 #import "PLSpherical2Panorama.h"
 #import "PLCylindricalPanorama.h"
 
+#import "PLSphericalRatioPanorama.h"
+
 @interface PLView : PLViewBase 
 {
     #pragma mark -

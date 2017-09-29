@@ -47,18 +47,32 @@
 
 -(void)selectPanorama:(NSInteger)index
 {
+   PLRotation ro = PLRotationMake(0.0, 0.0, 0.0);
+    
+    [self.plView.camera resetCurrentC:ro Pitch:ro.pitch yaw:ro.yaw];
+
+    
     NSObject<PLIPanorama> *panorama = nil;
+    //尺寸必须符合
     //Spherical2 panorama example (supports up 4096x2048 texture)
     if(index == 0)
     {
         panorama = [PLSpherical2Panorama panorama];
         [(PLSpherical2Panorama *)panorama setImage:[PLImage imageWithPath:[[NSBundle mainBundle] pathForResource:@"pano_sphere2" ofType:@"jpg"]]];
     }
+
     //Spherical panorama example (supports up 2048x1024 texture)
     else if(index == 1)
     {
         panorama = [PLSphericalPanorama panorama];
         [(PLSphericalPanorama *)panorama setTexture:[PLTexture textureWithImage:[PLImage imageWithPath:[[NSBundle mainBundle] pathForResource:@"pano_sphere" ofType:@"jpg"]]]];
+    }
+    //尺寸不必须符合，比例符合2;1即可
+    else if(index == 5)
+    {
+        panorama = [PLSphericalRatioPanorama panorama];
+	    [(PLSphericalRatioPanorama *)panorama setImage:[PLImage imageWithPath:[[NSBundle mainBundle] pathForResource:@"pano_sphere2" ofType:@"jpg"]]];
+
     }
     //Cubic panorama example (supports up 2048x2048 texture per face)
     else if(index == 2)

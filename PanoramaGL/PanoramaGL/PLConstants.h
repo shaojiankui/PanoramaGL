@@ -38,8 +38,8 @@
 
 //#define kTextureMaxWidth    1024
 //#define kTextureMaxHeight    1024
-#define kTextureMaxWidth     2048  //方块高
-#define kTextureMaxHeight    2048
+#define kTextureMaxWidth     6144  //方块高
+#define kTextureMaxHeight    6144
 
 
 #pragma mark -

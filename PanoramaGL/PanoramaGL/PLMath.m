@@ -70,7 +70,7 @@
 
 #pragma mark -
 #pragma mark pow methods
-
+//判断是否是2的乘方
 +(BOOL)isPowerOfTwo:(int)value
 {
 	while(!(value & 1))

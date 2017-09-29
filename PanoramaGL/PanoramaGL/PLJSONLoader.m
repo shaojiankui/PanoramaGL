@@ -210,6 +210,10 @@
             {
                 panoramaType = PLPanoramaTypeCubic;
                 panorama = [[PLCubicPanorama alloc] init];
+            }else if([type isEqualToString:@"ratio"])
+            {
+                panoramaType = PLPanoramaTypeSphericalRatio;
+                panorama = [[PLSphericalRatioPanorama alloc] init];
             }
             if(!panorama)
                 [NSException raise:@"PanoramaGL" format:@"Panorama type is wrong"];
@@ -242,6 +246,15 @@
                 if([[images allKeys] containsObject:@"image"])
                 {
                     [(PLSpherical2Panorama *)panorama setImage:[PLImage imageWithPath:[self getFilePath:[images objectForKey:@"image"] urlbase:urlbase]]];
+                }
+                else
+                    [NSException raise:@"PanoramaGL" format:@"images.image property not exists"];
+            }
+            else if(panoramaType == PLPanoramaTypeSphericalRatio)
+            {
+                if([[images allKeys] containsObject:@"image"])
+                {
+                    [(PLSphericalRatioPanorama *)panorama setImage:[PLImage imageWithPath:[self getFilePath:[images objectForKey:@"image"] urlbase:urlbase]]];
                 }
                 else
                     [NSException raise:@"PanoramaGL" format:@"images.image property not exists"];

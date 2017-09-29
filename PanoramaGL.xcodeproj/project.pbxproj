@@ -48,8 +48,7 @@
 		A2E776DF1B7C8ED300D3DFE7 /* PLView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E776B61B7C8ED300D3DFE7 /* PLView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2E776E01B7C8ED300D3DFE7 /* PLViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E776B81B7C8ED300D3DFE7 /* PLViewBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2E776E11B7C8ED300D3DFE7 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = A2E776BB1B7C8ED300D3DFE7 /* README.txt */; };
-		A2E776E31B7C91D400D3DFE7 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2E776E21B7C91D400D3DFE7 /* ViewController_iPad.xib */; };
-		A2E776E51B7C91DC00D3DFE7 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2E776E41B7C91DC00D3DFE7 /* ViewController_iPhone.xib */; };
+		A2E776E31B7C91D400D3DFE7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2E776E21B7C91D400D3DFE7 /* ViewController.xib */; };
 		A2E776F51B7C93AB00D3DFE7 /* hotspot.png in Resources */ = {isa = PBXBuildFile; fileRef = A2E776E71B7C93AB00D3DFE7 /* hotspot.png */; };
 		A2E776F61B7C93AB00D3DFE7 /* json.data in Resources */ = {isa = PBXBuildFile; fileRef = A2E776E81B7C93AB00D3DFE7 /* json.data */; };
 		A2E776F71B7C93AB00D3DFE7 /* json_cubic.data in Resources */ = {isa = PBXBuildFile; fileRef = A2E776E91B7C93AB00D3DFE7 /* json_cubic.data */; };
@@ -71,6 +70,7 @@
 		A2E7770E1B7C96FB00D3DFE7 /* right.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2E777081B7C96FB00D3DFE7 /* right.jpg */; };
 		A2E7770F1B7C96FB00D3DFE7 /* up.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2E777091B7C96FB00D3DFE7 /* up.jpg */; };
 		A2E777111B7C97D200D3DFE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E777101B7C97D200D3DFE7 /* LaunchScreen.storyboard */; };
+		B8BE45071F7CD27B0005C9DF /* PLSphericalRatioPanorama.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BE45061F7CD27B0005C9DF /* PLSphericalRatioPanorama.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -179,8 +179,7 @@
 		A2E776B91B7C8ED300D3DFE7 /* PLViewBaseProtected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLViewBaseProtected.h; sourceTree = "<group>"; };
 		A2E776BA1B7C8ED300D3DFE7 /* PLViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLViewDelegate.h; sourceTree = "<group>"; };
 		A2E776BB1B7C8ED300D3DFE7 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		A2E776E21B7C91D400D3DFE7 /* ViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPad.xib; sourceTree = "<group>"; };
-		A2E776E41B7C91DC00D3DFE7 /* ViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPhone.xib; sourceTree = "<group>"; };
+		A2E776E21B7C91D400D3DFE7 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		A2E776E71B7C93AB00D3DFE7 /* hotspot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotspot.png; sourceTree = "<group>"; };
 		A2E776E81B7C93AB00D3DFE7 /* json.data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.data; sourceTree = "<group>"; };
 		A2E776E91B7C93AB00D3DFE7 /* json_cubic.data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_cubic.data; sourceTree = "<group>"; };
@@ -202,6 +201,8 @@
 		A2E777081B7C96FB00D3DFE7 /* right.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = right.jpg; sourceTree = "<group>"; };
 		A2E777091B7C96FB00D3DFE7 /* up.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = up.jpg; sourceTree = "<group>"; };
 		A2E777101B7C97D200D3DFE7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B8BE45051F7CD27A0005C9DF /* PLSphericalRatioPanorama.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLSphericalRatioPanorama.h; sourceTree = "<group>"; };
+		B8BE45061F7CD27B0005C9DF /* PLSphericalRatioPanorama.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLSphericalRatioPanorama.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,8 +241,7 @@
 				A2E776431B7C8E7800D3DFE7 /* AppDelegate.m */,
 				A2E776451B7C8E7800D3DFE7 /* ViewController.h */,
 				A2E776461B7C8E7800D3DFE7 /* ViewController.m */,
-				A2E776E21B7C91D400D3DFE7 /* ViewController_iPad.xib */,
-				A2E776E41B7C91DC00D3DFE7 /* ViewController_iPhone.xib */,
+				A2E776E21B7C91D400D3DFE7 /* ViewController.xib */,
 				A2E7764B1B7C8E7800D3DFE7 /* Assets.xcassets */,
 				A2E776501B7C8E7800D3DFE7 /* Info.plist */,
 				A2E777101B7C97D200D3DFE7 /* LaunchScreen.storyboard */,
@@ -319,6 +319,8 @@
 				A2E7769D1B7C8ED300D3DFE7 /* PLSceneElementProtected.h */,
 				A2E7769E1B7C8ED300D3DFE7 /* PLSpherical2Panorama.h */,
 				A2E7769F1B7C8ED300D3DFE7 /* PLSpherical2Panorama.m */,
+				B8BE45051F7CD27A0005C9DF /* PLSphericalRatioPanorama.h */,
+				B8BE45061F7CD27B0005C9DF /* PLSphericalRatioPanorama.m */,
 				A2E776A01B7C8ED300D3DFE7 /* PLSphericalPanorama.h */,
 				A2E776A11B7C8ED300D3DFE7 /* PLSphericalPanorama.m */,
 				A2E776A21B7C8ED300D3DFE7 /* PLStructs.h */,
@@ -466,10 +468,9 @@
 				A2E776FC1B7C93AB00D3DFE7 /* pano_l.jpg in Resources */,
 				A2E776F81B7C93AB00D3DFE7 /* json_s2.data in Resources */,
 				A2E776F71B7C93AB00D3DFE7 /* json_cubic.data in Resources */,
-				A2E776E51B7C91DC00D3DFE7 /* ViewController_iPhone.xib in Resources */,
 				A2E7770E1B7C96FB00D3DFE7 /* right.jpg in Resources */,
 				A2E776FA1B7C93AB00D3DFE7 /* pano_d.jpg in Resources */,
-				A2E776E31B7C91D400D3DFE7 /* ViewController_iPad.xib in Resources */,
+				A2E776E31B7C91D400D3DFE7 /* ViewController.xib in Resources */,
 				A2E776F91B7C93AB00D3DFE7 /* pano_b.jpg in Resources */,
 				A2E7764C1B7C8E7800D3DFE7 /* Assets.xcassets in Resources */,
 				A2E777021B7C93AB00D3DFE7 /* pano_u.jpg in Resources */,
@@ -505,6 +506,7 @@
 				A2E776DA1B7C8ED300D3DFE7 /* PLTransitionFadeBase.m in Sources */,
 				A2E776DB1B7C8ED300D3DFE7 /* PLTransitionFadeIn.m in Sources */,
 				A2E776DD1B7C8ED300D3DFE7 /* PLUtils.m in Sources */,
+				B8BE45071F7CD27B0005C9DF /* PLSphericalRatioPanorama.m in Sources */,
 				A2E776BE1B7C8ED300D3DFE7 /* glues_mipmap.c in Sources */,
 				A2E776DC1B7C8ED300D3DFE7 /* PLTransitionFadeOut.m in Sources */,
 				A2E776E01B7C8ED300D3DFE7 /* PLViewBase.m in Sources */,

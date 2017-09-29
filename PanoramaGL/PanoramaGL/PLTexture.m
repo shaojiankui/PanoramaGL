@@ -135,6 +135,12 @@
         return 3072;
     else if(dimension <= 4096)
         return 4096;
+    else if(dimension <= 4096)
+        return 5120;
+    else if(dimension <= 4096)
+        return 6144;
+    else if(dimension <= 4096)
+        return 7168;
 	else
 		return 2048;
 }

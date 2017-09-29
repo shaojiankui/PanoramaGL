@@ -132,7 +132,7 @@
 {
     
 //	UIGraphicsBeginImageContext(CGRectMake(0.0f, 0.0f, size.width, size.height).size);
-    UIGraphicsBeginImageContextWithOptions(size, YES, 0);
+    UIGraphicsBeginImageContextWithOptions(size, YES, 1.0);
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	CGImageRef image = CGBitmapContextCreateImage(context);
 	[self deleteImage];
@@ -270,8 +270,8 @@
 	int w = size.width;
 	int h = size.height;
 	
-//	UIGraphicsBeginImageContext(CGRectMake(0.0f, 0.0f, w, h).size);
-    UIGraphicsBeginImageContextWithOptions(size, YES, 0);
+   // UIGraphicsBeginImageContext(CGRectMake(0.0f, 0.0f, w, h).size);
+    UIGraphicsBeginImageContextWithOptions(size, YES, 1.0);
 
 	CGContextRef context = UIGraphicsGetCurrentContext();
 
@@ -383,7 +383,7 @@
 	}
 	
 //	UIGraphicsBeginImageContext(bounds.size);
-    UIGraphicsBeginImageContextWithOptions(bounds.size, YES, 0);
+    UIGraphicsBeginImageContextWithOptions(bounds.size, YES, 1.0);
 
 	context = UIGraphicsGetCurrentContext();
 	
@@ -463,7 +463,7 @@
         
         CGSize newSize = CGSizeMake([leftImage getWidth] + [rightImage getWidth], MAX([leftImage getHeight], [rightImage getHeight]));
 //        UIGraphicsBeginImageContext(newSize);
-        UIGraphicsBeginImageContextWithOptions(newSize, YES, 0);
+        UIGraphicsBeginImageContextWithOptions(newSize, YES, 1.0);
 
         [leftUImage drawInRect:CGRectMake(0.0f, 0.0f, [leftImage getWidth], newSize.height)];
         [rightUImage drawInRect:CGRectMake([rightImage getWidth], 0.0f, [rightImage getWidth], newSize.height)];

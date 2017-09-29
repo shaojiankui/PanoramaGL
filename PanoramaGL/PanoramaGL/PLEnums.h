@@ -25,6 +25,7 @@ typedef enum
 	PLPanoramaTypeCubic,
 	PLPanoramaTypeSpherical,
     PLPanoramaTypeSpherical2,
+    PLPanoramaTypeSphericalRatio,
     PLPanoramaTypeCylindrical,
 } PLPanoramaType;
 
