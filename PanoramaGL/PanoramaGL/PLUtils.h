@@ -23,5 +23,11 @@
 
 + (void)swapFloatValues:(float *)firstValue :(float *)secondValue;
 + (void)swapIntValues:(int *)firstValue :(int *)secondValue;
+///尺寸必须是2的N次方，convertUpDimension为YES向上转换，convertUpDimension为NO向下转换
++(int)convertValidValueForDimension:(int)dimension ifNoPowerOfTwoConvertUpDimension:(BOOL)convertUpDimension;
+//向上转换
++ (int)convertUpValidValueForDimension:(int)dimension;
+//向下转换
++ (int)convertDownValidValueForDimension:(int)dimension;
 
 @end

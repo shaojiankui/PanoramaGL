@@ -254,7 +254,7 @@
             {
                 if([[images allKeys] containsObject:@"image"])
                 {
-                    [(PLSphericalRatioPanorama *)panorama setImage:[PLImage imageWithPath:[self getFilePath:[images objectForKey:@"image"] urlbase:urlbase]]];
+                    [(PLSphericalRatioPanorama *)panorama setImage:[PLImage imageWithPath:[self getFilePath:[images objectForKey:@"image"] urlbase:urlbase]] ifNoPowerOfTwoConvertUpDimension:NO];
                 }
                 else
                     [NSException raise:@"PanoramaGL" format:@"images.image property not exists"];

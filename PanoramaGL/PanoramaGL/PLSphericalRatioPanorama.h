@@ -25,7 +25,7 @@
 #pragma mark -
 #pragma mark property methods
 
--(void)setImage:(PLImage *)image;
+- (void)setImage:(PLImage *)image ifNoPowerOfTwoConvertUpDimension:(BOOL)convertUpDimension;
 
 //-(void)setTexture:(PLTexture *)texture;
 @end

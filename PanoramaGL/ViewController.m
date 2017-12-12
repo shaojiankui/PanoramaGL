@@ -70,8 +70,9 @@
     //尺寸不必须符合，比例符合2;1即可
     else if(index == 5)
     {
+        //ifNoPowerOfTwoConvertUpDimension 如果图片不满足2的N次方，YES向上取一个满足的，NO向下取一个满足的
         panorama = [PLSphericalRatioPanorama panorama];
-	    [(PLSphericalRatioPanorama *)panorama setImage:[PLImage imageWithPath:[[NSBundle mainBundle] pathForResource:@"pano_sphere2" ofType:@"jpg"]]];
+	    [(PLSphericalRatioPanorama *)panorama setImage:[PLImage imageWithPath:[[NSBundle mainBundle] pathForResource:@"pano_sphere2" ofType:@"jpg"]] ifNoPowerOfTwoConvertUpDimension:NO];
 
     }
     //Cubic panorama example (supports up 2048x2048 texture per face)

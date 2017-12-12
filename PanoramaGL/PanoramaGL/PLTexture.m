@@ -18,10 +18,9 @@
 
 #import "PLObjectBaseProtected.h"
 #import "PLTexture.h"
-
+#import "PLUtils.h"
 @interface PLTexture(Private)
 
--(int)convertToValidValueForDimension:(int)dimension;
 -(BOOL)loadTextureWithObject;
 -(void)releaseImage;
 -(void)deleteTexture;
@@ -106,44 +105,7 @@
 	format = value;
 }
 			 
-#pragma mark -
-#pragma mark utility methods
-			 
--(int)convertToValidValueForDimension:(int)dimension
-{
-	if(dimension <= 4)
-		return 4;
-	else if(dimension <= 8)
-		return 8;
-	else if(dimension <= 16)
-		return 16;
-	else if(dimension <= 32)
-		return 32;
-	else if(dimension <= 64)
-		return 64;
-	else if(dimension <= 128)
-		return 128;
-	else if(dimension <= 256)
-		return 256;
-	else if(dimension <= 512)
-		return 512;
-    else if(dimension <= 1024)
-        return 1024;
-    else if(dimension <= 2048)
-        return 2048;
-    else if(dimension <= 3072)
-        return 3072;
-    else if(dimension <= 4096)
-        return 4096;
-    else if(dimension <= 4096)
-        return 5120;
-    else if(dimension <= 4096)
-        return 6144;
-    else if(dimension <= 4096)
-        return 7168;
-	else
-		return 2048;
-}
+
 
 #pragma mark -
 #pragma mark load methods
@@ -173,12 +135,12 @@
 		if(![PLMath isPowerOfTwo:width] || width > kTextureMaxWidth)
 		{
 			isResizableImage = YES;
-			width = [self convertToValidValueForDimension:width];
+			width = [PLUtils convertUpValidValueForDimension:width];
 		}
 		if(![PLMath isPowerOfTwo:height] || height > kTextureMaxHeight)
 		{
 			isResizableImage = YES;
-			height = [self convertToValidValueForDimension:height];
+			height = [PLUtils convertUpValidValueForDimension:height];
 		}
 					 
 		if(isResizableImage)
@@ -186,6 +148,7 @@
 					 
 		glGenTextures(1, &textureID[0]);
 					 
+      
 		int errGL = glGetError();
 		if(errGL != GL_NO_ERROR)
 		{
@@ -213,11 +176,23 @@
 		glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 					 
 		glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE); //GL10.GL_REPLACE
-					 
+
 		unsigned char * bits = image.bits;
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width , height, 0, GL_RGBA, GL_UNSIGNED_BYTE, bits);
 					 
-//        NSLog(@"final width:%zd,height:%zd",width,height);
+        NSLog(@"final width:%zd,height:%zd",width,height);
+        
+        if([PLMath isPowerOfTwo:height])
+        {
+            NSLog(@"height isPowerOfTwo");
+        }
+        if([PLMath isPowerOfTwo:width])
+        {
+            NSLog(@"width isPowerOfTwo");
+            
+        }
+        
+        
 		free(bits);
 		bits = nil;
 						  

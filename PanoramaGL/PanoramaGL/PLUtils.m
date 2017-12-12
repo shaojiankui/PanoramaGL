@@ -44,5 +44,77 @@
 	*secondValue = *secondValue ^ *firstValue;
 	*firstValue = *firstValue ^ *secondValue;
 }
+#pragma mark -
+#pragma mark utility methods
++(int)convertValidValueForDimension:(int)dimension ifNoPowerOfTwoConvertUpDimension:(BOOL)convertUpDimension{
+    if (convertUpDimension) {
+       return [self convertUpValidValueForDimension:dimension];
+    }else{
+      return  [self convertDownValidValueForDimension:dimension];
+    }
+}
 
++(int)convertUpValidValueForDimension:(int)dimension
+{
+    if(dimension <= 4)
+        return 4;
+    else if(dimension <= 8)
+        return 8;
+    else if(dimension <= 16)
+        return 16;
+    else if(dimension <= 32)
+        return 32;
+    else if(dimension <= 64)
+        return 64;
+    else if(dimension <= 128)
+        return 128;
+    else if(dimension <= 256)
+        return 256;
+    else if(dimension <= 512)
+        return 512;
+    else if(dimension <= 1024)
+        return 1024;
+    else if(dimension <= 2048)
+        return 2048;
+    else if(dimension <= 4096)
+        return 4096;
+    else if(dimension <= 8192)
+        return 8192;
+    else if(dimension <= 16384)
+        return 16384;
+    else
+        return 2048;
+}
+
+//向下转换
++ (int)convertDownValidValueForDimension:(int)dimension{
+    if(dimension <= 4)
+        return 4;
+    else if(dimension < 8)
+        return 4;
+    else if(dimension < 16)
+        return 8;
+    else if(dimension < 32)
+        return 16;
+    else if(dimension < 64)
+        return 32;
+    else if(dimension < 128)
+        return 64;
+    else if(dimension < 256)
+        return 128;
+    else if(dimension < 512)
+        return 256;
+    else if(dimension < 1024)
+        return 512;
+    else if(dimension < 2048)
+        return 1024;
+    else if(dimension < 4096)
+        return 2048;
+    else if(dimension < 8192)
+        return 4096;
+    else if(dimension < 16384)
+        return 8192;
+    else
+        return 2048;
+}
 @end
